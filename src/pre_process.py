@@ -33,9 +33,9 @@ import matplotlib.pyplot as plt
 # Function to open and display DICOM images
 def display_dicom_images(image_paths):
     plt.figure(figsize=(15, 5))  # Adjust figure size if needed
-    for i, path in enumerate(image_paths[:3]):
+    for i, path in enumerate(image_paths[:5]):
         ds = pydicom.dcmread(path)
-        plt.subplot(1, 3, i+1)
+        plt.subplot(1, 5, i+1)
         plt.imshow(ds.pixel_array, cmap=plt.cm.bone)
         plt.title(f"Image {i+1}")
         plt.axis('off')

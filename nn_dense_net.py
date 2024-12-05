@@ -46,11 +46,11 @@ def DenseNet(input_shape, num_classes, growth_rate=32, num_layers_per_block=[6, 
     model = Model(inputs, outputs, name='DenseNet_MRI')
     return model
 
-# input_shape = (256, 256, 1)
-# num_classes = 2
-# model = DenseNet(input_shape=input_shape, num_classes=num_classes)
+input_shape = (256, 256, 1)
+num_classes = 2
+model = DenseNet(input_shape=input_shape, num_classes=num_classes)
 
-# model.compile(optimizer=Adam(learning_rate=0.001),
-#               loss='categorical_crossentropy',
-#               metrics=['accuracy'])
-# model.summary()
+model.compile(optimizer=Adam(learning_rate=0.001),
+              loss='categorical_crossentropy',
+              metrics=['accuracy'])
+model.summary()
